@@ -6,6 +6,9 @@ public class Socket2 {
         try{
             Socket sock = new Socket("www.google.com.br", 80);
 
+
+            catch
         }
+
     }
 }
