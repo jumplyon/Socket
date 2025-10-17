@@ -1,10 +1,15 @@
+import javax.swing.*;
 import java.net.*;
 import java.io.*;
 
 public class Socket2 {
     public static void main( String[] args ) {
         try {
-            Socket sock = new Socket("www.google.com.br", 80);
+            String host = JOptionPane.showInputDialog("Digite o endereço para realizar a conexão:"  );
+            String portinha = JOptionPane.showInputDialog("Digite a porta:");
+                Integer.parseInt(portinha);
+                int porta = Integer.parseInt(portinha);
+            Socket sock = new Socket( host, porta);
             PrintWriter out = new PrintWriter(sock.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(sock.getInputStream()));
             String linha = "";
